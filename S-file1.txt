@@ -1,0 +1,14 @@
+Big data is a collection of large, complex data sets that are difficult to manage and analyze using traditional data processing tools. It can be structured, semi-structured, or unstructured. 
+What's in big data?
+Structured data: Inventory databases, financial transactions, and other data that's organized in a specific way 
+Unstructured data: Social media posts, videos, and other data that's unorganized 
+Mixed data sets: Data sets that combine structured and unstructured data, such as data used to train AI models 
+What's big about big data?
+Volume: Big data sets are extremely large and grow exponentially over time 
+Velocity: Big data sets are constantly flowing in from computers, mobile devices, and other sources 
+Variety: Big data sets can include many different types of data, such as text, video, images, and audio 
+What's big data used for?
+Decision making
+Organizations use big data to improve processes, policies, and customer experiences 
+Predictive modeling
+Big data is used in machine learning projects and other advanced analytics applications 

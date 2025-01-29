@@ -1,0 +1,33 @@
+!apt-get update
+!apt-get install openjdk-8-jdk-headless -qq > /dev/null
+!pip install pyspark
+
+
+import os
+os.environ["JAVA_HOME"] = "/usr/lib/jvm/java-8-openjdk-amd64"
+os.environ["PATH"] = os.environ["JAVA_HOME"] + "/bin:" + os.environ["PATH"]
+
+
+!wget https://archive.apache.org/dist/hadoop/core/hadoop-2.7.7/hadoop-2.7.7.tar.gz
+!tar -xvzf hadoop-2.7.7.tar.gz
+!mv hadoop-2.7.7 hadoop
+
+# Configure Hadoop
+os.environ["HADOOP_HOME"] = "/content/hadoop"
+os.environ["PATH"] += ":/content/hadoop/bin"
+
+
+# Write core-site.xml using Python file handling
+core_site_config = """
+<configuration>
+  <property>
+    <name>fs.defaultFS</name>
+    <value>file:///</value>
+  </property>
+</configuration>
+"""
+
+with open("/content/hadoop/etc/hadoop/core-site.xml", "w") as file:
+    file.write(core_site_config)
+
+
